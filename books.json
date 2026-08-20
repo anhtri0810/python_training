@@ -1,21 +1,9 @@
 [
     {
-        "title": "wuthering heights",
-        "author": "bronte",
-        "year": 1847,
-        "tag": "novel"
-    },
-    {
         "title": "sherlock holmes",
         "author": "doyle ",
         "year": 1896,
         "tag": "novel"
-    },
-    {
-        "title": "doraemon",
-        "author": "fujiko",
-        "year": 1981,
-        "tag": "manga"
     },
     {
         "title": "naruto",
@@ -45,12 +33,6 @@
         "title": "Don Quixote",
         "author": "Cervantez",
         "year": 1605,
-        "tag": "novel"
-    },
-    {
-        "title": "The little prince",
-        "author": "Exupery",
-        "year": 1943,
         "tag": "novel"
     }
 ]

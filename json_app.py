@@ -222,29 +222,34 @@ def main():
 	create_data()
 	books = read_data()
 	while True:
-		choice = input(MENU).lower()
-		today = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-		history[choice] = today
-		write_log(history)
+		try:
+			choice = input(MENU).lower()
+			today = dt.now().strftime("%Y-%m-%d %H:%M:%S")
+			history[choice] = today
+			write_log(history)
 
-		match choice:
-			case "a":
-				add_book(books)
-			case "s":
-				show_books(books)
-			case "q":
-				stop = True
-				break
-			case "f":
-				find_book(books)
-			case "d":
-				delete_book(books)
-			case "t":
-				tag_book(books)
-			case "g":
-				get_tagged(books)
-			case _:
-				print("Please enter the right choice")
+			match choice:
+				case "a":
+					add_book(books)
+				case "s":
+					show_books(books)
+				case "q":
+					stop = True
+					break
+				case "f":
+					find_book(books)
+				case "d":
+					delete_book(books)
+				case "t":
+					tag_book(books)
+				case "g":
+					get_tagged(books)
+				case _:
+					print("Please enter the right choice")
+		except Exception as e:
+			print(e)
+
+
 
 
 main()
