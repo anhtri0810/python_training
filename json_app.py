@@ -71,23 +71,7 @@ def read_data():
 
 
 def add_book(books):
-	book_set = set()
-
-	for book in books:
-		book_set.add(book["title"].lower())
-	while True:
-
-		title = input("Please enter the name of the book: ")
-		title_split = title.split()
-		title = " ".join(title_split)
-
-		if title.lower() in book_set:
-			print("Error! Please add another book")
-		else:
-			break
-
-	book_set.add(title)
-
+	title = input("Please enter the name of the book: ")
 	author = input("Please enter the name of the author: ")
 	year = int(input("Please enter the year when the book published: "))
 
@@ -108,7 +92,7 @@ def show_book(book, counter):
 	print(f"The title is: {book['title']}")
 	print(f"The author is: {book['author']}")
 	print(f"The year is: {book['year']}")
-	# tag_name = "Hasn't tagged yet" if not book["tag"] else book["tag"]
+
 	if not book["tag"]:
 		print("Hasn't tagged yet")
 	else:
@@ -119,7 +103,9 @@ def show_books(books):
 	if not books:
 		print("No book!!")
 	else:
-		for no, book in enumerate(books, start=1):
+		# list[dict(title, author, year)]
+		new_books = sorted(books, key = lambda d: (d["title"].lower(), -d["year"]))
+		for no, book in enumerate(new_books, start=1):
 			show_book(book, no)
 
 
