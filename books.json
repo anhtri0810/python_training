@@ -1,0 +1,56 @@
+[
+    {
+        "title": "wuthering heights",
+        "author": "bronte",
+        "year": 1847,
+        "tag": "novel"
+    },
+    {
+        "title": "sherlock holmes",
+        "author": "doyle ",
+        "year": 1896,
+        "tag": "novel"
+    },
+    {
+        "title": "doraemon",
+        "author": "fujiko",
+        "year": 1981,
+        "tag": "manga"
+    },
+    {
+        "title": "naruto",
+        "author": "mashashi",
+        "year": 1999,
+        "tag": "manga"
+    },
+    {
+        "title": "one piece",
+        "author": "oda",
+        "year": 1999,
+        "tag": "manga"
+    },
+    {
+        "title": "hai van dam duoi day bien",
+        "author": "vernes",
+        "year": 1876,
+        "tag": "novel"
+    },
+    {
+        "title": "one-punch man",
+        "author": "ONE",
+        "year": 2001,
+        "tag": "manga"
+    },
+    {
+        "title": "Don Quixote",
+        "author": "Cervantez",
+        "year": 1605,
+        "tag": "novel"
+    },
+    {
+        "title": "The little prince",
+        "author": "Exupery",
+        "year": 1943,
+        "tag": "novel"
+    }
+]
