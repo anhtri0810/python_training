@@ -163,29 +163,28 @@ def delete_book(books):
 def tag_book(books):
 	index, cmd = input("> ").split()
 	index = int(index) - 1
-
 	if index < 0 or index >= len(books):
 		print("Invalid")
 	else:
-		if cmd not in tags:
-			tags[cmd] = []
-
-		if index in tags[cmd]:
+		if books[index].get("tag") == cmd:
 			print(f"Already has that book with {cmd}")
 		else:
-			tags[cmd].append(index)
 			books[index]["tag"] = cmd
 			write_data(books)
 			print(f"classify the book successfully with {cmd}")
 
 
 def get_tagged(books):
-	tag = input("Please enter the tag: ")
-	if tag not in tags:
-		print("Invalid")
-	else:
-		for counter, index in enumerate(tags[tag], start=1):
-			show_book(books[index], counter)
+    tag = input("Please enter the tag: ")
+    counter = 1
+    found = False
+    for book in books:
+        if book.get("tag") == tag:
+            show_book(book, counter)
+            counter += 1
+            found = True
+    if not found:
+        print("Invalid")
 
 
 def create_copy():
